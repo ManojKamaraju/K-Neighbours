@@ -1,0 +1,136 @@
+# Libraries Used in Machine Learning
+
+## 1. NumPy
+**NumPy (Numerical Python)** is a fundamental library for numerical computing in Python. It provides support for arrays, matrices, and mathematical functions.
+
+### Features:
+- Provides powerful **N-dimensional arrays**.
+- Efficient mathematical operations such as **linear algebra, Fourier transforms, and statistics**.
+- Optimized performance using C-based implementation.
+
+### Installation:
+```bash
+pip install numpy
+```
+
+### Example Usage:
+```python
+import numpy as np
+arr = np.array([1, 2, 3, 4, 5])
+print(arr.mean())  # Output: 3.0
+```
+
+---
+
+## 2. Pandas
+**Pandas** is a data manipulation and analysis library that provides data structures like DataFrames and Series for handling structured data.
+
+### Features:
+- Efficient data manipulation using **DataFrames and Series**.
+- Built-in support for handling **missing data**.
+- Allows **data filtering, merging, and grouping**.
+
+### Installation:
+```bash
+pip install pandas
+```
+
+### Example Usage:
+```python
+import pandas as pd
+data = {'Name': ['Alice', 'Bob'], 'Age': [25, 30]}
+df = pd.DataFrame(data)
+print(df)
+```
+
+---
+
+## 3. Matplotlib
+**Matplotlib** is a data visualization library that allows creating static, animated, and interactive plots in Python.
+
+### Features:
+- Supports **line plots, bar charts, histograms, scatter plots**, etc.
+- Highly customizable with **labels, legends, and colors**.
+- Can be used in **Jupyter notebooks**.
+
+### Installation:
+```bash
+pip install matplotlib
+```
+
+### Example Usage:
+```python
+import matplotlib.pyplot as plt
+x = [1, 2, 3, 4]
+y = [10, 20, 25, 30]
+plt.plot(x, y, marker='o')
+plt.title('Simple Plot')
+plt.show()
+```
+
+---
+
+## 4. Scikit-learn
+**Scikit-learn** is a machine learning library built on NumPy, SciPy, and Matplotlib. It provides tools for supervised and unsupervised learning.
+
+### Features:
+- Provides algorithms for **classification, regression, clustering, and dimensionality reduction**.
+- Supports **data preprocessing, feature selection, and model evaluation**.
+- Optimized implementations of ML algorithms.
+
+### Installation:
+```bash
+pip install scikit-learn
+```
+
+### Example Usage:
+```python
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.datasets import load_iris
+
+# Load dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Split dataset
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Train KNN model
+knn = KNeighborsClassifier(n_neighbors=5)
+knn.fit(X_train, y_train)
+
+# Make predictions
+y_pred = knn.predict(X_test)
+print(y_pred)
+```
+
+---
+
+## 5. OpenCV
+**OpenCV (Open Source Computer Vision Library)** is a library used for image processing and computer vision applications.
+
+### Features:
+- Supports image manipulation, face detection, object tracking, and edge detection.
+- Works with **images and videos**.
+- Optimized for real-time applications.
+
+### Installation:
+```bash
+pip install opencv-python
+```
+
+### Example Usage:
+```python
+import cv2
+img = cv2.imread('image.jpg')
+cv2.imshow('Image', img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+
+---
+
+## Conclusion
+These libraries form the foundation of machine learning and data science projects. They provide powerful tools for numerical computing, data handling, visualization, and model implementation.
+
